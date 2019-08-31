@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectEntity">
+    tools:context=".SelectEntityActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,44 +28,47 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_legal_entity"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:onClick="toThirdActivity"
             android:text="Юридическое лицо"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:cornerRadius="15dp"
-            android:textColor="#FFFFFF" />
+            app:cornerRadius="15dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_individual_entrepreneur"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:onClick="toThirdActivity"
             android:text="Индивидуальный предприниматель"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:cornerRadius="15dp"
-            android:textColor="#FFFFFF" />
+            app:cornerRadius="15dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_natural_person"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:onClick="toThirdActivity"
             android:text="Физическое лицо"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:cornerRadius="15dp"
-            android:textColor="#FFFFFF" />
+            app:cornerRadius="15dp" />
 
     </LinearLayout>
 

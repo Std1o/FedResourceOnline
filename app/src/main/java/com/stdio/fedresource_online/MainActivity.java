@@ -41,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toSecondActivity(View view) {
-        startActivity(new Intent(this, SelectEntity.class));
+        startActivity(new Intent(this, SelectEntityActivity.class));
     }
 }
