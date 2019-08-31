@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectEntity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/textLightColor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="28sp"
+            android:text="Выберите лицо, от которого будет опубликовано сообщение!"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_legal_entity"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:text="Юридическое лицо"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            android:textColor="#FFFFFF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_individual_entrepreneur"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:text="Индивидуальный предприниматель"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            android:textColor="#FFFFFF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_natural_person"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:text="Физическое лицо"
+            android:textSize="20sp"
+            app:cornerRadius="15dp"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

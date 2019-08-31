@@ -2,7 +2,9 @@ package com.stdio.fedresource_online;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
@@ -36,5 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void toSecondActivity(View view) {
+        startActivity(new Intent(this, SelectEntity.class));
     }
 }

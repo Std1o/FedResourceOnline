@@ -45,16 +45,17 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_continue"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:onClick="toSecondActivity"
             android:text="Продолжить"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-            android:textColor="#FFFFFF" />
+            app:cornerRadius="15dp" />
 
     </LinearLayout>
 
