@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FedResource-Online</string>
+
+    <string name="legal_entity">Юридическое лицо</string>
+    <string name="individual_entrepreneur">Индивидуальный предприниматель</string>
+    <string name="natural_person">Физическое лицо</string>
 </resources>
