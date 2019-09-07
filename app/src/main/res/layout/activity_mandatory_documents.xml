@@ -20,7 +20,7 @@
             android:layout_marginLeft="30dp"
             android:textSize="30sp"
             android:text="Перечень обязательных документов"
-            android:textColor="@android:color/white"
+            android:textColor="@color/textColor2"
             android:textStyle="bold"
             android:textAlignment="center"/>
 
