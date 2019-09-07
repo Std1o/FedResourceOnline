@@ -17,7 +17,7 @@ import in.mayanknagwanshi.imagepicker.ImageSelectActivity;
 public class UploadSNILSPhotoAcivity extends AppCompatActivity {
 
     ImageView ivSNILSPhoto;
-    Bitmap passportPhoto;
+    public static Bitmap passportPhoto;
     MaterialButton btnSelectImage, btnDeleteImage;
 
     @Override
