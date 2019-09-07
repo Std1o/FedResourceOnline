@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UploadPassportPhotoActivity"></activity>
+        <activity android:name=".UploadSNILSPhotoAcivity"></activity>
+        <activity android:name=".UploadPassportPhotoActivity" />
         <activity android:name=".MandatoryDocumentsActivity" />
         <activity android:name=".SelectEntityActivity" />
         <activity android:name=".MainActivity">

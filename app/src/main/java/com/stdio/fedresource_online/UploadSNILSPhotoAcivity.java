@@ -14,22 +14,22 @@ import com.google.android.material.button.MaterialButton;
 
 import in.mayanknagwanshi.imagepicker.ImageSelectActivity;
 
-public class UploadPassportPhotoActivity extends AppCompatActivity {
+public class UploadSNILSPhotoAcivity extends AppCompatActivity {
 
-    ImageView ivPassportPhoto;
+    ImageView ivSNILSPhoto;
     Bitmap passportPhoto;
     MaterialButton btnSelectImage, btnDeleteImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload_passport_photo);
+        setContentView(R.layout.activity_upload_snilsphoto_acivity);
         init();
         btnDeleteImage.setEnabled(false);
     }
 
     private void init() {
-        ivPassportPhoto = findViewById(R.id.ivPassportPhoto);
+        ivSNILSPhoto = findViewById(R.id.ivSNILSPhoto);
         btnSelectImage = findViewById(R.id.btnSelect);
         btnDeleteImage = findViewById(R.id.btnDelete);
     }
@@ -44,13 +44,9 @@ public class UploadPassportPhotoActivity extends AppCompatActivity {
 
     public void deleteImage(View view) {
         passportPhoto = null;
-        ivPassportPhoto.setImageDrawable(getResources().getDrawable(R.drawable.passport_example));
+        ivSNILSPhoto.setImageDrawable(getResources().getDrawable(R.drawable.snils_exmaple));
         btnDeleteImage.setEnabled(false);
         btnSelectImage.setEnabled(true);
-    }
-
-    public void toUploadSNILSPhotoActivity(View view) {
-        startActivity(new Intent(this, UploadSNILSPhotoAcivity.class));
     }
 
     @Override
@@ -60,7 +56,7 @@ public class UploadPassportPhotoActivity extends AppCompatActivity {
             String filePath = data.getStringExtra(ImageSelectActivity.RESULT_FILE_PATH);
             Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
             passportPhoto = selectedImage;
-            ivPassportPhoto.setImageBitmap(selectedImage);
+            ivSNILSPhoto.setImageBitmap(selectedImage);
             btnDeleteImage.setEnabled(true);
             btnSelectImage.setEnabled(false);
         }
