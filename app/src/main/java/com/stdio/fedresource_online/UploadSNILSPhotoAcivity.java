@@ -17,7 +17,7 @@ import in.mayanknagwanshi.imagepicker.ImageSelectActivity;
 public class UploadSNILSPhotoAcivity extends AppCompatActivity {
 
     ImageView ivSNILSPhoto;
-    public static Bitmap passportPhoto;
+    public static Bitmap snilsPhoto;
     MaterialButton btnSelectImage, btnDeleteImage;
 
     @Override
@@ -43,7 +43,7 @@ public class UploadSNILSPhotoAcivity extends AppCompatActivity {
     }
 
     public void deleteImage(View view) {
-        passportPhoto = null;
+        snilsPhoto = null;
         ivSNILSPhoto.setImageDrawable(getResources().getDrawable(R.drawable.snils_exmaple));
         btnDeleteImage.setEnabled(false);
         btnSelectImage.setEnabled(true);
@@ -59,7 +59,7 @@ public class UploadSNILSPhotoAcivity extends AppCompatActivity {
         if (requestCode == 1213 && resultCode == Activity.RESULT_OK) {
             String filePath = data.getStringExtra(ImageSelectActivity.RESULT_FILE_PATH);
             Bitmap selectedImage = BitmapFactory.decodeFile(filePath);
-            passportPhoto = selectedImage;
+            snilsPhoto = selectedImage;
             ivSNILSPhoto.setImageBitmap(selectedImage);
             btnDeleteImage.setEnabled(true);
             btnSelectImage.setEnabled(false);
