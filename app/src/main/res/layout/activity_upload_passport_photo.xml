@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivPassportPhoto"
         android:layout_width="match_parent"
         android:layout_height="600dp"
         android:src="@drawable/passport_example"/>
@@ -24,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="55dp"
             android:text="Выбрать"
+            android:onClick="selectImage"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="55dp"
             android:text="Удалить"
+            android:onClick="deleteImage"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
