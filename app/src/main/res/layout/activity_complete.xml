@@ -45,6 +45,7 @@
         android:layout_gravity="bottom|right"
         android:layout_marginBottom="100dp"
         android:layout_marginRight="25dp"
-        app:srcCompat="@drawable/next" />
+        app:srcCompat="@drawable/next"
+        android:onClick="toFinishActivity"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

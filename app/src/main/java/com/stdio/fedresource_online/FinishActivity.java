@@ -2,19 +2,18 @@ package com.stdio.fedresource_online;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class CompleteActivity extends AppCompatActivity {
+public class FinishActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complete);
+        setContentView(R.layout.activity_finish);
     }
 
-    public void toFinishActivity(View view) {
-        startActivity(new Intent(this, FinishActivity.class));
+    public void finishActivity(View view) {
+        finish();
     }
 }
