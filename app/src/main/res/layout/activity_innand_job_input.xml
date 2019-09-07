@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".INNAndJobInputActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Формирование пакета документов"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"/>
+
+    <EditText
+        android:id="@+id/etINN"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/selector_lines_edit_view_bg"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="ИНН юрлица"
+        android:textAlignment="center"
+        android:inputType="textMultiLine|textCapSentences"
+        android:padding="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="35dp"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
+        app:srcCompat="@drawable/info"
+        app:backgroundTint="@color/infoColor"/>
+
+    <EditText
+        android:id="@+id/etJob"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/selector_lines_edit_view_bg"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Должность уполномоченного лица"
+        android:textAlignment="center"
+        android:inputType="textMultiLine|textCapSentences"
+        android:padding="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="35dp"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="420dp"
+        app:srcCompat="@drawable/info"
+        app:backgroundTint="@color/infoColor"
+        android:onClick="showJobInfo"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="25dp"
+        app:srcCompat="@drawable/next" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

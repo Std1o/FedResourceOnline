@@ -49,6 +49,10 @@ public class UploadSNILSPhotoAcivity extends AppCompatActivity {
         btnSelectImage.setEnabled(true);
     }
 
+    public void toINNAndJobInputActivity(View view) {
+        startActivity(new Intent(this, INNAndJobInputActivity.class));
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
