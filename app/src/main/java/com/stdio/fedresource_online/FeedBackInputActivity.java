@@ -27,6 +27,7 @@ public class FeedBackInputActivity extends AppCompatActivity {
     EditText etPhone, etMail;
     String message;
     String recipient = "kwork-stdio@mail.ru";
+    String senderMail, senderPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,8 @@ public class FeedBackInputActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         getRecipientFromDatabase(database);
+        getSenderMailFromDatabase(database);
+        getSenderPasswordFromDatabase(database);
     }
 
     private void getRecipientFromDatabase(FirebaseDatabase database) {
@@ -48,6 +51,46 @@ public class FeedBackInputActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 recipient = dataSnapshot.getValue(String.class);
                 Log.d("firebasee", "Value is: " + recipient);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("firebasee", "Failed to read value.", error.toException());
+            }
+        });
+    }
+
+    private void getSenderMailFromDatabase(FirebaseDatabase database) {
+        DatabaseReference refDate = database.getReference("mail");
+        // Read from the database
+        refDate.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                senderMail = dataSnapshot.getValue(String.class);
+                Log.d("firebasee", "Value is: " + senderMail);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("firebasee", "Failed to read value.", error.toException());
+            }
+        });
+    }
+
+    private void getSenderPasswordFromDatabase(FirebaseDatabase database) {
+        DatabaseReference refDate = database.getReference("password");
+        // Read from the database
+        refDate.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                senderPassword = dataSnapshot.getValue(String.class);
+                Log.d("firebasee", "Value is: " + senderPassword);
             }
 
             @Override
@@ -109,10 +152,10 @@ public class FeedBackInputActivity extends AppCompatActivity {
                     byte[] dataRegistrationPhoto = bosRegistrationPhoto.toByteArray();
                     byte[] dataSNILSPhoto = bosSNILSPhoto.toByteArray();
 
-                    GMailSender sender = new GMailSender("bitsettt@gmail.com", "verysecurepassword");
+                    GMailSender sender = new GMailSender(senderMail, senderPassword);
                     sender.sendMail("Федресурс-онлайн",
                             dataPassportPhoto, dataRegistrationPhoto, dataSNILSPhoto, message,
-                            "bitsettt@gmail.com",
+                            senderMail,
                             recipient);
                     dialog.dismiss();
                     startActivity(new Intent(FeedBackInputActivity.this, CompleteActivity.class));
