@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "200230871870",
+    "firebase_url": "https://fedresourceonline-93e1c.firebaseio.com",
+    "project_id": "fedresourceonline-93e1c",
+    "storage_bucket": "fedresourceonline-93e1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200230871870:android:f49858d45f7613c88a026f",
+        "android_client_info": {
+          "package_name": "com.stdio.fedresource_online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200230871870-5pg4bd3hjb3g8o1fh28uegicejd2k8gh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7cGoWLGGYvi0Pve1BCTaitpgiviSVpWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200230871870-5pg4bd3hjb3g8o1fh28uegicejd2k8gh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
