@@ -39,7 +39,15 @@ public class FeedBackInputActivity extends AppCompatActivity {
         phone = etPhone.getText().toString();
         mail = etMail.getText().toString();
         System.out.println(phone + "\n" + mail);
-        sendMessage();
+        if (phone.isEmpty()) {
+            Toast.makeText(this, "Введите номер телефона", Toast.LENGTH_SHORT).show();
+        }
+        else if (mail.isEmpty()) {
+            Toast.makeText(this, "Введите E-mail", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            sendMessage();
+        }
     }
 
     private void sendMessage() {

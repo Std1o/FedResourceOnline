@@ -33,6 +33,14 @@ public class INNAndJobInputActivity extends AppCompatActivity {
         INN = etINN.getText().toString();
         job = etJob.getText().toString();
         System.out.println(INN + "\n" + job);
-        startActivity(new Intent(this, FeedBackInputActivity.class));
+        if (INN.isEmpty()) {
+            Toast.makeText(this, "Введите ИНН", Toast.LENGTH_SHORT).show();
+        }
+        else if (job.isEmpty()) {
+            Toast.makeText(this, "Введите должность", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            startActivity(new Intent(this, FeedBackInputActivity.class));
+        }
     }
 }

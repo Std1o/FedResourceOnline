@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -50,7 +51,12 @@ public class UploadPassportPhotoActivity extends AppCompatActivity {
     }
 
     public void toUploadSNILSPhotoActivity(View view) {
-        startActivity(new Intent(this, UploadSNILSPhotoAcivity.class));
+        if (passportPhoto != null) {
+            startActivity(new Intent(this, UploadSNILSPhotoAcivity.class));
+        }
+        else {
+            Toast.makeText(this, "Загрузите фото паспорта", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

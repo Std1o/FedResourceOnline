@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -50,7 +51,12 @@ public class UploadSNILSPhotoAcivity extends AppCompatActivity {
     }
 
     public void toINNAndJobInputActivity(View view) {
-        startActivity(new Intent(this, INNAndJobInputActivity.class));
+        if (snilsPhoto != null) {
+            startActivity(new Intent(this, INNAndJobInputActivity.class));
+        }
+        else {
+            Toast.makeText(this, "Загрузите фото СНИЛС", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
