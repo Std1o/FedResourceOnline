@@ -47,7 +47,7 @@ public class FinishActivity extends AppCompatActivity {
     }
 
     public void finishActivity(View view) {
-        finish();
+        finishAffinity();
     }
 
     public void callIntent(View view) {

@@ -126,6 +126,7 @@ public class FeedBackInputActivity extends AppCompatActivity {
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setTitle("Отправка данных");
         dialog.setMessage("Пожалуйста, подождите...");
+        dialog.setCancelable(false);
         dialog.show();
         Thread sender = new Thread(new Runnable() {
             @Override
