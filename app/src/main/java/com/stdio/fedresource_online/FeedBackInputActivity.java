@@ -12,6 +12,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.stdio.fedresource_online.gmailHelper.GMailSender;
 
 import java.io.ByteArrayOutputStream;
@@ -28,6 +33,29 @@ public class FeedBackInputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed_back_input);
         init();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        getRecipientFromDatabase(database);
+    }
+
+    private void getRecipientFromDatabase(FirebaseDatabase database) {
+        DatabaseReference refDate = database.getReference("recipient");
+        // Read from the database
+        refDate.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                recipient = dataSnapshot.getValue(String.class);
+                Log.d("firebasee", "Value is: " + recipient);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("firebasee", "Failed to read value.", error.toException());
+            }
+        });
     }
 
     private void init() {
