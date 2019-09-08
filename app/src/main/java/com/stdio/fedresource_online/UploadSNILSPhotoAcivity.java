@@ -23,6 +23,7 @@ public class UploadSNILSPhotoAcivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_snilsphoto_acivity);
         init();
