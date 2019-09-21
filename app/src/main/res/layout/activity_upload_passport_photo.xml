@@ -9,14 +9,15 @@
     <ImageView
         android:id="@+id/ivPassportPhoto"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:src="@drawable/passport_example"/>
+        android:layout_height="500dp"
+        android:src="@drawable/passport_example" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="650dp">
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp">
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSelect"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
@@ -53,7 +54,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:layout_gravity="bottom|right"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="150dp"
         android:layout_marginRight="25dp"
         app:srcCompat="@drawable/next"
         android:onClick="toUploadSNILSPhotoActivity"/>
