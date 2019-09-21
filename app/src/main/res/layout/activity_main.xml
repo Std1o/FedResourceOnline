@@ -34,13 +34,25 @@
             android:textColor="@color/textColor"
             android:textSize="20sp"/>
 
-        <CheckBox
-            android:id="@+id/checkBoxAgreement"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Согласен с условиями договора-оферты"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp">
+
+            <CheckBox
+                android:id="@+id/checkBoxAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Согласен с условиями "/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="договора-оферты"
+                android:id="@+id/tv_offer_contract" />
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_continue"
